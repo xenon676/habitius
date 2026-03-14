@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+body {
+  background: var(--color-main-gray1);
+}
+
+/* Game-like text behavior - prevent accidental selection */
+* {
+  user-select: none;
+}
+
+/* Allow text selection only for input fields and textareas */
+input, textarea {
+  user-select: text;
+  cursor: text;
+}
+
+@theme {
+    --color-habit-weak3: #E04040;
+    --color-habit-weak2: #E56161;
+    --color-habit-weak1: #EB8484;
+    --color-habit-neutral: #F0C060;
+    --color-habit-strong1: #93CAF0;
+    --color-habit-strong2: #5DAFE9;
+    --color-habit-strong3: #2090E0;
+
+    --color-main-white: #FFFFFF;
+    --color-main-gray1: #F7F7F7;
+    --color-main-gray2: #EEEEEE;
+    --color-main-gray3: #DDDDDD;
+    --color-main-gray4: #AAAAAA;
+    --color-main-gray5: #777777;
+    --color-main-gray6: #555555;
+    --color-main-gray7: #303030;
+    --color-main-gray8: #202020;
+    --color-main-black: #000000;
+    --color-main-teal1: #007777;
+    --color-main-teal2: #009999;
+    --color-main-cyan: #00FFFF;
+}
+
+:root {
+    --color-habit-weak3: #E04040;
+    --color-habit-weak2: #E56161;
+    --color-habit-weak1: #EB8484;
+    --color-habit-neutral: #F0C060;
+    --color-habit-strong1: #93CAF0;
+    --color-habit-strong2: #5DAFE9;
+    --color-habit-strong3: #2090E0;
+}

@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+env/
+
+# Build / output
+frontend/dist/
+frontend/dist-electron/
+backend/alembic/versions/
+
+# Environment and secrets
+.env
+*.env.local
+
+# Database
+*.db
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.eggs/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+*.log
+
+# Exclude basic-stack (remove this folder manually if desired)
+basic-stack/
