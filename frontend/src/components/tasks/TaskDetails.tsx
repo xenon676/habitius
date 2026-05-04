@@ -55,7 +55,7 @@ function TaskContent({ title, notes, streak = 0, taskType, onEdit, onChecklistIt
 
       {/* Checklist Items (only for non-habit tasks) */}
       {taskType !== 'habit' && 'checklistItems' in props && props.checklistItems && (
-        <div className="mt-2 space-y-1" onClick={(e) => e.stopPropagation()}>
+        <div className="mt-2 space-y-1" onClick={(e) => e.stopPropagation()} onPointerDown={(e) => e.stopPropagation()}>
           {props.checklistItems.map((item, index) => (
             <div key={index} className="flex items-center gap-2 hover:bg-main-gray2 rounded-sm px-1 py-0.5 transition-colors">
               <div 

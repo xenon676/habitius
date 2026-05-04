@@ -15,6 +15,8 @@ function TaskSide(props: TaskSideProps) {
     }
   }
 
+  const stopDrag = (e: React.PointerEvent) => e.stopPropagation()
+
   if (taskType === 'habit') {
     const { isPositive, isAccepted } = props
     const style = isAccepted ? { backgroundColor: `var(--color-${color})` } : {}
@@ -24,6 +26,7 @@ function TaskSide(props: TaskSideProps) {
         className={`w-1/9 flex items-center justify-center ${isAccepted ? '' : 'bg-main-gray3'} cursor-pointer`} 
         style={style}
         onClick={handleClick}
+        onPointerDown={stopDrag}
       >
         <div className="relative w-8 h-8 group">
           {isAccepted ? (
@@ -61,6 +64,7 @@ function TaskSide(props: TaskSideProps) {
         className={`w-1/9 flex items-center justify-center ${isGray ? 'bg-main-gray5' : ''} cursor-pointer`} 
         style={style}
         onClick={handleClick}
+        onPointerDown={stopDrag}
       >
         <div className="relative w-8 h-8 group">
           {isGray ? (
@@ -89,6 +93,7 @@ function TaskSide(props: TaskSideProps) {
         className={`w-1/9 flex items-center justify-center ${isCompleted ? 'bg-main-gray5' : ''} cursor-pointer`} 
         style={style}
         onClick={handleClick}
+        onPointerDown={stopDrag}
       >
         <div className="relative w-8 h-8 group">
           {isCompleted ? (
