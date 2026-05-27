@@ -145,12 +145,14 @@ function Header() {
         </div>
 
         {/* DEV: CRON Button */}
-        <button
-          onClick={handleCronTrigger}
-          className="bg-main-gray8 hover:bg-main-gray7 text-main-white px-4 py-2 rounded mr-4"
-        >
-          DEV: CRON
-        </button>
+        {false && (
+          <button
+            onClick={handleCronTrigger}
+            className="bg-main-gray8 hover:bg-main-gray7 text-main-white px-4 py-2 rounded mr-4"
+          >
+            DEV: CRON
+          </button>
+        )}
       </div>
     </header>
   )

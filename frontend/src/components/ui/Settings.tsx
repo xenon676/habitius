@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { AppleLogoIcon, GoogleLogoIcon, CaretDownIcon } from '@phosphor-icons/react';
 import { updateCronTime } from '../../api/tasksApi';
+import { useAuth } from '../../contexts/AuthContext';
 
 const Settings: React.FC = () => {
+  const { user } = useAuth();
   const [cronTime, setCronTime] = useState(0)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
@@ -30,21 +32,21 @@ const Settings: React.FC = () => {
           <div className="flex items-center justify-between border-b border-main-gray3 pb-3">
             <div className="flex items-center gap-8">
               <h3 className="font-medium w-32">Username</h3>
-              <p className="text-main-gray6">xenon676</p>
+              <p className="text-main-gray6">{user?.username}</p>
             </div>
             <button className="text-main-teal2 hover:text-main-teal1">Edit</button>
           </div>
           <div className="flex items-center justify-between border-b border-main-gray3 pb-3">
             <div className="flex items-center gap-8">
               <h3 className="font-medium w-32">Email</h3>
-              <p className="text-main-gray6">jeremyzh676@gmail.com</p>
+              <p className="text-main-gray6">user@example.com</p>
             </div>
             <button className="text-main-teal2 hover:text-main-teal1">Edit</button>
           </div>
           <div className="flex items-center justify-between border-b border-main-gray3 pb-3">
             <div className="flex items-center gap-8">
               <h3 className="font-medium w-32">Display name</h3>
-              <p className="text-main-gray6">xenon676</p>
+              <p className="text-main-gray6">Example User</p>
             </div>
             <button className="text-main-teal2 hover:text-main-teal1">Edit</button>
           </div>
